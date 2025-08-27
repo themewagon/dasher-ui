@@ -9,6 +9,8 @@ import {
 } from "@tabler/icons-react";
 import { Metadata } from "next";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const metadata: Metadata = {
   title: "Maintenance | Dasher - Responsive Bootstrap 5 Admin Dashboard",
   description: "Dasher - Responsive Bootstrap 5 Admin Dashboard",
@@ -28,7 +30,7 @@ const Maintenance = () => {
           </div>
           <div>
             <Image
-              src="/images/svg/maintenance.svg"
+              src={`${BASE_PATH}/images/svg/maintenance.svg`}
               alt="Image"
               style={{ width: "500px" }}
             />

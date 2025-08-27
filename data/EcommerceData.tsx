@@ -4,6 +4,8 @@ import { v4 as uuid } from "uuid";
 //import custom types
 import { ProductListType } from "types/EcommerceType";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const productListData: ProductListType[] = [
   {
     id: uuid(),
@@ -13,7 +15,7 @@ export const productListData: ProductListType[] = [
     price: "$65.29",
     quantity: 235,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-1.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-1.jpg`,
   },
   {
     id: uuid(),
@@ -23,7 +25,7 @@ export const productListData: ProductListType[] = [
     price: "$15.99",
     quantity: 56,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-2.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-2.jpg`,
   },
   {
     id: uuid(),
@@ -33,7 +35,7 @@ export const productListData: ProductListType[] = [
     price: "$12.39",
     quantity: 67,
     status: "Deactive",
-    imageSrc: "/images/ecommerce/product-3.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-3.jpg`,
   },
   {
     id: uuid(),
@@ -43,7 +45,7 @@ export const productListData: ProductListType[] = [
     price: "$35.99",
     quantity: 24,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-4.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-4.jpg`,
   },
   {
     id: uuid(),
@@ -53,7 +55,7 @@ export const productListData: ProductListType[] = [
     price: "$65.29",
     quantity: 32,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-5.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-5.jpg`,
   },
   {
     id: uuid(),
@@ -63,7 +65,7 @@ export const productListData: ProductListType[] = [
     price: "$45.29",
     quantity: 45,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-6.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-6.jpg`,
   },
   {
     id: uuid(),
@@ -73,7 +75,7 @@ export const productListData: ProductListType[] = [
     price: "$65.29",
     quantity: 235,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-1.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-1.jpg`,
   },
   {
     id: uuid(),
@@ -83,7 +85,7 @@ export const productListData: ProductListType[] = [
     price: "$15.99",
     quantity: 56,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-2.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-2.jpg`,
   },
   {
     id: uuid(),
@@ -93,7 +95,7 @@ export const productListData: ProductListType[] = [
     price: "$12.39",
     quantity: 67,
     status: "Deactive",
-    imageSrc: "/images/ecommerce/product-3.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-3.jpg`,
   },
   {
     id: uuid(),
@@ -103,7 +105,7 @@ export const productListData: ProductListType[] = [
     price: "$35.99",
     quantity: 24,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-4.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-4.jpg`,
   },
   {
     id: uuid(),
@@ -113,7 +115,7 @@ export const productListData: ProductListType[] = [
     price: "$65.29",
     quantity: 235,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-1.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-1.jpg`,
   },
   {
     id: uuid(),
@@ -123,7 +125,7 @@ export const productListData: ProductListType[] = [
     price: "$15.99",
     quantity: 56,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-2.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-2.jpg`,
   },
   {
     id: uuid(),
@@ -133,7 +135,7 @@ export const productListData: ProductListType[] = [
     price: "$12.39",
     quantity: 67,
     status: "Deactive",
-    imageSrc: "/images/ecommerce/product-3.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-3.jpg`,
   },
   {
     id: uuid(),
@@ -143,6 +145,6 @@ export const productListData: ProductListType[] = [
     price: "$35.99",
     quantity: 24,
     status: "Active",
-    imageSrc: "/images/ecommerce/product-4.jpg",
+    imageSrc: `${BASE_PATH}/images/ecommerce/product-4.jpg`,
   },
 ];

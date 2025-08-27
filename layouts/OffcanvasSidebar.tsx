@@ -12,6 +12,8 @@ import Sidebar from "./Sidebar";
 //import custom hooks
 import useMenu from "hooks/useMenu";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const OffcanvasSidebar = () => {
   const { showMenu, toggleMenuHandler } = useMenu();
 
@@ -25,7 +27,7 @@ const OffcanvasSidebar = () => {
     >
       <OffcanvasHeader closeButton>
         <Link href="/" className="d-flex align-items-center gap-2">
-          <Image src="/images/brand/logo/logo-icon.svg" alt="" />
+          <Image src={`${BASE_PATH}/images/brand/logo/logo-icon.svg`} alt="" />
           <span className="fw-bold fs-4  site-logo-text">Dasher</span>
         </Link>
       </OffcanvasHeader>

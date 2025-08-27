@@ -4,10 +4,12 @@ import { v4 as uuid } from "uuid";
 //import custom types
 import { BlogPost } from "types/BlogType";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const blogListData: BlogPost[] = [
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-6.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-6.jpg`,
     post_title: "Youtube Growth Marketing Strategy 2025",
     post_date: "Feb 2, 2025",
     author: "John Doe",
@@ -19,7 +21,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-1.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-1.jpg`,
     post_title: "Monetization Tips for Blogs",
     post_date: "Feb 20, 2025",
     author: "Alice Brown",
@@ -31,7 +33,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-2.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-2.jpg`,
     post_title: "Best Blogging Practices",
     post_date: "Feb 14, 2025",
     author: "Robert Green",
@@ -43,7 +45,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-3.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-3.jpg`,
     post_title: "Email Marketing for Bloggers",
     post_date: "Feb 12, 2025",
     author: "John Doe",
@@ -55,7 +57,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-4.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-4.jpg`,
     post_title: "SEO Best Practices in 2025",
     post_date: "Feb 2, 2025",
     author: "Emily White",
@@ -67,7 +69,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-5.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-5.jpg`,
     post_title: "The Future of Blogging: Trends You Can’t Ignore",
     post_date: "Feb 3, 2025",
     author: "Emily White",
@@ -79,7 +81,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-6.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-6.jpg`,
     post_title: "Top 10 Content Strategies to Boost Engagement in 2025",
     post_date: "Feb 1, 2025",
     author: "Smmion Ditaa",
@@ -91,7 +93,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-7.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-7.jpg`,
     post_title: "Best Blogging Practices",
     post_date: "Feb 14, 2025",
     author: "Robert Green",
@@ -103,7 +105,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-6.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-6.jpg`,
     post_title: "Youtube Growth Marketing Strategy 2025",
     post_date: "Feb 2, 2025",
     author: "John Doe",
@@ -115,7 +117,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-1.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-1.jpg`,
     post_title: "Monetization Tips for Blogs",
     post_date: "Feb 20, 2025",
     author: "Alice Brown",
@@ -127,7 +129,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-2.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-2.jpg`,
     post_title: "Best Blogging Practices",
     post_date: "Feb 14, 2025",
     author: "Robert Green",
@@ -139,7 +141,7 @@ export const blogListData: BlogPost[] = [
   },
   {
     id: uuid(),
-    post_img: "/images/blog/blog-img-3.jpg",
+    post_img: `${BASE_PATH}/images/blog/blog-img-3.jpg`,
     post_title: "Email Marketing for Bloggers",
     post_date: "Feb 12, 2025",
     author: "John Doe",

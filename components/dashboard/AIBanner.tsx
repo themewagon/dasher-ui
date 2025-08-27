@@ -1,6 +1,8 @@
 //import node modules libraries
 import { Card, CardBody, Button, Image } from "react-bootstrap";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const AIBanner = () => {
   return (
     <Card
@@ -21,7 +23,7 @@ const AIBanner = () => {
             </Button>
           </div>
           <div>
-            <Image src="/images/png/dasher-ai.png" alt="" />
+            <Image src={`${BASE_PATH}/images/png/dasher-ai.png`} alt="" />
           </div>
         </div>
       </CardBody>

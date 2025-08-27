@@ -38,6 +38,8 @@ type AvatarVariant =
   | "light"
   | "dark";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 interface AvatarProps {
   size?: AvatarSize;
   type: AvatarType;
@@ -129,7 +131,7 @@ const Avatar: React.FC<AvatarProps> = (props) => {
           >
             <DasherTippy content={name}>
               <Image
-                src={src}
+                src={`${BASE_PATH}${src}`}
                 alt={alt}
                 className={`mb-2 mb-lg-0 ${className}`}
               />
@@ -144,7 +146,7 @@ const Avatar: React.FC<AvatarProps> = (props) => {
             }`}
           >
             <Image
-              src={src}
+              src={`${BASE_PATH}${src}`}
               alt={alt}
               className={`mb-2 mb-lg-0 ${className}`}
             />
@@ -196,7 +198,7 @@ const Ratio: React.FC<RatioProps> = (props) => {
   return (
     <span>
       <Image
-        src={src}
+        src={`${BASE_PATH}${src}`}
         alt=""
         className={`img-4by3-${size} mb-2 mb-lg-0 ${className}`}
       />
