@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   basePath: isProd ? "/dasher-ui" : "",
-  assetPrefix: isProd ? "/dasher-ui" : "",
+  assetPrefix: isProd ? "/dasher-ui/" : "",
   images: {
     unoptimized: true,
   },
