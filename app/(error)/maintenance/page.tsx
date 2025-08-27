@@ -8,6 +8,7 @@ import {
   IconLifebuoy,
 } from "@tabler/icons-react";
 import { Metadata } from "next";
+import { getAssetPath } from "helper/assetPath";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -30,7 +31,7 @@ const Maintenance = () => {
           </div>
           <div>
             <Image
-              src={`${BASE_PATH}/images/svg/maintenance.svg`}
+              src={getAssetPath("/images/svg/maintenance.svg")}
               alt="Image"
               style={{ width: "500px" }}
             />

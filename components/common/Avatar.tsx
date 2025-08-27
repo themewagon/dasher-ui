@@ -24,6 +24,7 @@ import React, { ReactNode } from "react";
 
 // import custom components
 import DasherTippy from "./DasherTippy";
+import { getAssetPath } from "helper/assetPath";
 
 type AvatarSize = "xxl" | "xl" | "lg" | "md" | "sm" | "xs";
 type AvatarType = "image" | "initial";
@@ -129,7 +130,7 @@ const Avatar: React.FC<AvatarProps> = (props) => {
           >
             <DasherTippy content={name}>
               <Image
-                src={src}
+                src={getAssetPath(src)}
                 alt={alt}
                 className={`mb-2 mb-lg-0 ${className}`}
               />
@@ -144,7 +145,7 @@ const Avatar: React.FC<AvatarProps> = (props) => {
             }`}
           >
             <Image
-              src={src}
+              src={getAssetPath(src)}
               alt={alt}
               className={`mb-2 mb-lg-0 ${className}`}
             />
@@ -196,7 +197,7 @@ const Ratio: React.FC<RatioProps> = (props) => {
   return (
     <span>
       <Image
-        src={src}
+        src={getAssetPath(src)}
         alt=""
         className={`img-4by3-${size} mb-2 mb-lg-0 ${className}`}
       />

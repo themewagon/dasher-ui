@@ -22,6 +22,7 @@ import { Avatar } from "components/common/Avatar";
 
 // import required routes
 import { DashboardMenu } from "routes/DashboardRoute";
+import { getAssetPath } from "helper/assetPath";
 
 interface SidebarProps {
   hideLogo: boolean;
@@ -59,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
               href="/"
               className="d-none d-md-flex align-items-center gap-2"
             >
-              <Image src="/images/brand/logo/logo-icon.svg" alt="" />
+              <Image src={getAssetPath("/images/brand/logo/logo-icon.svg")} alt="" />
               <span className="fw-bold fs-4 site-logo-text">Dasher</span>
             </Link>
           </div>
@@ -259,7 +260,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
               <div>
                 <Avatar
                   type="image"
-                  src="/images/avatar/avatar-1.jpg"
+                  src={getAssetPath("/images/avatar/avatar-1.jpg")}
                   size="md"
                   className="rounded-circle"
                 />

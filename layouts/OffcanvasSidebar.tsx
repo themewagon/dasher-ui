@@ -11,6 +11,7 @@ import Sidebar from "./Sidebar";
 
 //import custom hooks
 import useMenu from "hooks/useMenu";
+import { getAssetPath } from "helper/assetPath";
 
 const OffcanvasSidebar = () => {
   const { showMenu, toggleMenuHandler } = useMenu();
@@ -25,7 +26,7 @@ const OffcanvasSidebar = () => {
     >
       <OffcanvasHeader closeButton>
         <Link href="/" className="d-flex align-items-center gap-2">
-          <Image src="/images/brand/logo/logo-icon.svg" alt="" />
+          <Image src={getAssetPath("/images/brand/logo/logo-icon.svg")} alt="" />
           <span className="fw-bold fs-4  site-logo-text">Dasher</span>
         </Link>
       </OffcanvasHeader>
