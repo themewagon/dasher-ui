@@ -3,8 +3,6 @@ import { Metadata } from "next";
 import { Fragment } from "react";
 import { Row, Col, Image, Button } from "react-bootstrap";
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 export const metadata: Metadata = {
   title: "404 error | Dasher - Responsive Bootstrap 5 Admin Dashboard",
   description: "Dasher - Responsive Bootstrap 5 Admin Dashboard",
@@ -18,7 +16,7 @@ const NotFound = () => {
           <div className="text-center">
             <div>
               <Image
-                src={`${BASE_PATH}/images/svg/404.svg`}
+                src="/images/svg/404.svg"
                 alt="Image"
                 className="img-fluid"
               />

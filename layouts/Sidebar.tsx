@@ -23,8 +23,6 @@ import { Avatar } from "components/common/Avatar";
 // import required routes
 import { DashboardMenu } from "routes/DashboardRoute";
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 interface SidebarProps {
   hideLogo: boolean;
   containerId?: string;
@@ -61,7 +59,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
               href="/"
               className="d-none d-md-flex align-items-center gap-2"
             >
-              <Image src={`${BASE_PATH}/images/brand/logo/logo-icon.svg`} alt="" />
+              <Image src="/images/brand/logo/logo-icon.svg" alt="" />
               <span className="fw-bold fs-4 site-logo-text">Dasher</span>
             </Link>
           </div>
@@ -261,7 +259,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
               <div>
                 <Avatar
                   type="image"
-                  src={`${BASE_PATH}/images/avatar/avatar-1.jpg`}
+                  src="/images/avatar/avatar-1.jpg"
                   size="md"
                   className="rounded-circle"
                 />

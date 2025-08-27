@@ -10,8 +10,6 @@ import { UserMenuItem } from "routes/HeaderRoute";
 //import custom components
 import { Avatar } from "components/common/Avatar";
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 interface UserToggleProps {
   children?: React.ReactNode;
   onClick?: () => void;
@@ -30,7 +28,7 @@ const UserMenu = () => {
       <Dropdown.Toggle as={CustomToggle}>
         <Avatar
           type="image"
-          src={`${BASE_PATH}/images/avatar/avatar-1.jpg`}
+          src="/images/avatar/avatar-1.jpg"
           size="sm"
           alt="User Avatar"
           className="rounded-circle"
@@ -39,7 +37,7 @@ const UserMenu = () => {
       <Dropdown.Menu align="end" className="p-0 dropdown-menu-md">
         <div className="d-flex gap-3 align-items-center border-dashed border-bottom px-4 py-4">
           <Image
-            src={`${BASE_PATH}/images/avatar/avatar-1.jpg`}
+            src="/images/avatar/avatar-1.jpg"
             alt=""
             className="avatar avatar-md rounded-circle"
           />

@@ -12,9 +12,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   output: "export",
-  env: {
-    NEXT_PUBLIC_BASE_PATH: isProd ? "/dasher-ui" : "",
-  },
   sassOptions: {
     includePaths: [path.join(__dirname, "node_modules")],
   },

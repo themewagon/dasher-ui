@@ -24,8 +24,6 @@ import {
 //import custom components
 import Flex from "components/common/Flex";
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 export const metadata: Metadata = {
   title: "Sign In | Dasher - Responsive Bootstrap 5 Admin Dashboard",
   description: "Dasher - Responsive Bootstrap 5 Admin Dashboard",
@@ -41,7 +39,7 @@ const SignIn = () => {
               href="/"
               className="fs-2 fw-bold d-flex align-items-center gap-2 justify-content-center mb-6"
             >
-              <Image src={`${BASE_PATH}/images/brand/logo/logo-icon.svg`} alt="Dasher" />
+              <Image src="/images/brand/logo/logo-icon.svg" alt="Dasher" />
               <span>Dasher</span>
             </Link>
             <h1 className="mb-1">Welcome Back</h1>
