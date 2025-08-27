@@ -10,7 +10,6 @@ import {
 import { Metadata } from "next";
 import { getAssetPath } from "helper/assetPath";
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export const metadata: Metadata = {
   title: "Maintenance | Dasher - Responsive Bootstrap 5 Admin Dashboard",
