@@ -1,28 +1,27 @@
 "use client";
 //import node module libraries
-import React, { Fragment } from "react";
-import {
-  Image,
-  Accordion,
-  ListGroup,
-  Badge,
-  Nav,
-  NavItem,
-  Button,
-} from "react-bootstrap";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React, { Fragment } from "react";
+import {
+  Accordion,
+  Badge,
+  Image,
+  ListGroup,
+  Nav,
+  NavItem,
+} from "react-bootstrap";
 
 //import custom types
 import { MenuItemType } from "types/menuTypes";
 
 //import custom components
-import CustomToggle, { CustomToggleLevel2 } from "./SidebarMenuToggle";
 import { Avatar } from "components/common/Avatar";
+import CustomToggle, { CustomToggleLevel2 } from "./SidebarMenuToggle";
 
 // import required routes
-import { DashboardMenu } from "routes/DashboardRoute";
 import { getAssetPath } from "helper/assetPath";
+import { DashboardMenu } from "routes/DashboardRoute";
 
 interface SidebarProps {
   hideLogo: boolean;
@@ -36,14 +35,12 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
     return (
       <Link
         href={`${item.link}`}
-        className={`nav-link ${location === `/${item.link}` ? "active" : ""}`}
-      >
-        <span className="text">{item.name}</span>
+        className={`nav-link ${location === `/${item.link}` ? "active" : ""}`}>
+        <span className='text'>{item.name}</span>
         {item.badge && (
           <Badge
-            className="ms-1"
-            bg={item.badgecolor ? item.badgecolor : "primary"}
-          >
+            className='ms-1'
+            bg={item.badgecolor ? item.badgecolor : "primary"}>
             {item.badge}
           </Badge>
         )}
@@ -55,30 +52,31 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
     <div id={containerId}>
       <div>
         {hideLogo || (
-          <div className="brand-logo">
+          <div className='brand-logo'>
             <Link
-              href="/"
-              className="d-none d-md-flex align-items-center gap-2"
-            >
-              <Image src={getAssetPath("/images/brand/logo/logo-icon.svg")} alt="" />
-              <span className="fw-bold fs-4 site-logo-text">Dasher</span>
+              href='/'
+              className='d-none d-md-flex align-items-center gap-2'>
+              <Image
+                src={getAssetPath("/images/brand/logo/logo-icon.svg")}
+                alt=''
+              />
+              <span className='fw-bold fs-4 site-logo-text'>Dasher</span>
             </Link>
           </div>
         )}
 
         {/* Sidebar Dashboard Menu */}
         <Accordion
-          defaultActiveKey="0"
-          as="ul"
-          bsPrefix="navbar-nav flex-column"
-        >
+          defaultActiveKey='0'
+          as='ul'
+          bsPrefix='navbar-nav flex-column'>
           {DashboardMenu.map(function (menu, index) {
             if (menu.grouptitle) {
               return (
                 // Group Title
-                <Nav.Item key={index} as="li">
-                  <div className="nav-heading">{menu.title}</div>
-                  <hr className="mx-5 nav-line mb-1" />
+                <Nav.Item key={index} as='li'>
+                  <div className='nav-heading'>{menu.title}</div>
+                  <hr className='mx-5 nav-line mb-1' />
                 </Nav.Item>
               );
             } else {
@@ -90,7 +88,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                       {menu.title}
                     </CustomToggle>
                     <Accordion.Collapse eventKey={index.toString()}>
-                      <ListGroup as="ul" className="dropdown-menu flex-column">
+                      <ListGroup as='ul' className='dropdown-menu flex-column'>
                         {menu.children.map(function (
                           menuLevel1Item,
                           menuLevel1Index
@@ -98,27 +96,23 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                           if (menuLevel1Item.children) {
                             return (
                               <ListGroup.Item
-                                as="li"
-                                bsPrefix="nav-item"
-                                key={menuLevel1Index}
-                              >
+                                as='li'
+                                bsPrefix='nav-item'
+                                key={menuLevel1Index}>
                                 {/* first level menu started  */}
                                 <Accordion
-                                  defaultActiveKey="0"
-                                  bsPrefix="navbar-nav flex-column"
-                                >
+                                  defaultActiveKey='0'
+                                  bsPrefix='navbar-nav flex-column'>
                                   <CustomToggleLevel2
                                     eventKey={"0"}
-                                    href={"#link"}
-                                  >
+                                    href={"#link"}>
                                     {menuLevel1Item.title}
                                   </CustomToggleLevel2>
                                   <Accordion.Collapse eventKey={"0"}>
                                     <ListGroup
-                                      as="ul"
-                                      bsPrefix=""
-                                      className="nav flex-column"
-                                    >
+                                      as='ul'
+                                      bsPrefix=''
+                                      className='nav flex-column'>
                                       {/* second level menu started  */}
                                       {menuLevel1Item.children.map(function (
                                         menuLevel2Item,
@@ -127,29 +121,24 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                         if (menuLevel2Item.children) {
                                           return (
                                             <ListGroup.Item
-                                              as="li"
-                                              bsPrefix="nav-item"
-                                              key={menuLevel2Index}
-                                            >
+                                              as='li'
+                                              bsPrefix='nav-item'
+                                              key={menuLevel2Index}>
                                               {/* second level accordion menu started  */}
                                               <Accordion
-                                                defaultActiveKey="0"
-                                                className="navbar-nav flex-column"
-                                              >
+                                                defaultActiveKey='0'
+                                                className='navbar-nav flex-column'>
                                                 <CustomToggleLevel2
-                                                  eventKey={"0"}
-                                                >
+                                                  eventKey={"0"}>
                                                   {menuLevel2Item.title}
                                                 </CustomToggleLevel2>
                                                 <Accordion.Collapse
                                                   eventKey={"0"}
-                                                  bsPrefix="nav-item"
-                                                >
+                                                  bsPrefix='nav-item'>
                                                   <ListGroup
-                                                    as="ul"
-                                                    bsPrefix=""
-                                                    className="nav flex-column"
-                                                  >
+                                                    as='ul'
+                                                    bsPrefix=''
+                                                    className='nav flex-column'>
                                                     {/* third level menu started  */}
                                                     {menuLevel2Item.children.map(
                                                       function (
@@ -161,9 +150,8 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                                             key={
                                                               menuLevel3Index
                                                             }
-                                                            as="li"
-                                                            bsPrefix="nav-item"
-                                                          >
+                                                            as='li'
+                                                            bsPrefix='nav-item'>
                                                             <Link
                                                               href={
                                                                 menuLevel3Item.link?.toString() ||
@@ -174,8 +162,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                                                 `/${menuLevel3Item.link}`
                                                                   ? "active"
                                                                   : ""
-                                                              }`}
-                                                            >
+                                                              }`}>
                                                               {
                                                                 menuLevel3Item.name
                                                               }
@@ -195,9 +182,8 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                           return (
                                             <ListGroup.Item
                                               key={menuLevel2Index}
-                                              as="li"
-                                              bsPrefix="nav-item"
-                                            >
+                                              as='li'
+                                              bsPrefix='nav-item'>
                                               {generateLink(menuLevel2Item)}
                                             </ListGroup.Item>
                                           );
@@ -213,10 +199,9 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                           } else {
                             return (
                               <ListGroup.Item
-                                as="li"
-                                bsPrefix="nav-item"
-                                key={menuLevel1Index}
-                              >
+                                as='li'
+                                bsPrefix='nav-item'
+                                key={menuLevel1Index}>
                                 {/* first level menu items */}
                                 <Link
                                   href={`/${menuLevel1Item?.link}`}
@@ -224,8 +209,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                     location === `/${menuLevel1Item.link}`
                                       ? "active"
                                       : ""
-                                  }`}
-                                >
+                                  }`}>
                                   {menuLevel1Item.name}
                                 </Link>
                                 {/* end of first level menu items */}
@@ -240,37 +224,33 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                 );
               } else {
                 return (
-                  <Nav.Item as="li" key={index}>
+                  <Nav.Item as='li' key={index}>
                     <Link
                       href={menu.link ? `${menu.link}` : "#"}
                       className={`nav-link ${
                         location === menu.link ? "active" : ""
-                      }`}
-                    >
-                      <span className="nav-icon">{menu.icon}</span>
-                      <span className="text">{menu.title}</span>
+                      }`}>
+                      <span className='nav-icon'>{menu.icon}</span>
+                      <span className='text'>{menu.title}</span>
                     </Link>
                   </Nav.Item>
                 );
               }
             }
           })}
-          <NavItem as="li" bsPrefix="">
-            <div className="text-center py-5 upgrade-ui">
+          <NavItem as='li' bsPrefix=''>
+            <div className='text-center py-5 upgrade-ui'>
               <div>
                 <Avatar
-                  type="image"
+                  type='image'
                   src={getAssetPath("/images/avatar/avatar-1.jpg")}
-                  size="md"
-                  className="rounded-circle"
+                  size='md'
+                  className='rounded-circle'
                 />
-                <div className="my-3">
-                  <h5 className="mb-1 fs-6">Jitu Chauhan</h5>
-                  <span className="text-secondary">Free Version - 1 Month</span>
+                <div className='my-3'>
+                  <h5 className='mb-1 fs-6'>Jitu Chauhan</h5>
+                  <span className='text-secondary'>Free Version - 1 Month</span>
                 </div>
-                <Button variant="primary" href="#!">
-                  Upgrade
-                </Button>
               </div>
             </div>
           </NavItem>
