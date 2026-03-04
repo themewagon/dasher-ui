@@ -14,10 +14,7 @@ const DashboardLayout: React.FC<DashboardProps> = ({ children }) => {
         <Header />
         <div className='custom-container'>{children}</div>
         <div className='custom-container'>
-          <span className='me-1'>Theme distributed by - </span>
-          <a href='https://www.themewagon.com/' target='_blank' rel='noopener '>
-            ThemeWagon
-          </a>
+          <span className='me-1'>© All rights reserved by <a href="https://codescandy.com/" target="_blank">Codescandy</a>. Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>.</span>
         </div>
       </div>
     </div>
