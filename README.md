@@ -6,7 +6,7 @@
 
 #### Download
 
-- [Download from ThemeWagon](https://themewagon.com/themes/dasher-ui/)
+- [Download from ThemeWagon](https://themewagon.com/themes/desher/)
 
 ## Getting Started
 
